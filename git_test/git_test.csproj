@@ -148,17 +148,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="images\1894.jpg" />
-    <Content Include="images\2.jpg" />
-    <Content Include="images\699.jpg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="images\847.jpg" />
     <Content Include="images\848.jpg" />
     <Content Include="images\849.jpeg" />
     <Content Include="images\850.jpg" />
-    <Content Include="images\851.jpeg" />
     <Content Include="images\851.jpg" />
-    <Content Include="images\header.jpg" />
-    <Content Include="images\header2.jpg" />
+    <Content Include="images\h1.jpg" />
+    <Content Include="images\h2.jpg" />
+    <Content Include="images\h3.jpg" />
+    <Content Include="images\h4.jpg" />
+    <Content Include="images\h6.jpg" />
+    <Content Include="images\header.jpeg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -166,14 +167,18 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="images\logo.png" />
-    <Content Include="images\logo2.jpg" />
-    <Content Include="images\post1.jpg" />
     <Content Include="images\stamp.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
