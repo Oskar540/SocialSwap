@@ -1,24 +1,326 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿/* MAIN ELEMENTS */
+body {
+    background: #fff;
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
+    body a {
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+p {
+    font-family: 'Dosis', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.full-width {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+/* //MAIN ELEMENTS */
+
+/* NAVIGATION */
+.nav-custom {
+    margin: none;
+    border: none;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar-header {
+    padding-top: 15px;
+}
+
+    .navbar-header img {
+        width: 11em;
+        height: auto;
+    }
+
+.navbar-default .navbar-nav li a {
+    color: #fff;
+    font-size: 1.1em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.navbar-default .navbar-nav .active a {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+    .navbar-default .navbar-nav .active a:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+        color: #fff;
+    }
+
+.navbar-fixed-top > .container > .fixed-top-collapse {
     padding-left: 15px;
     padding-right: 15px;
 }
+/* //NAVIGATION */
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+/* BANNER */
+.banner {
+    background: url('../images/header.jpg');
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    min-height: 800px;
+    position: relative;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+    .banner:before, .banner:after {
+        position: absolute;
+        content: "";
+        bottom: 45px;
+        left: 0;
+        right: auto;
+        top: 80%;
+        width: 100%;
+        background: #000;
+        z-index: -1;
+        -webkit-box-shadow: 0 40px 50px #000;
+        -moz-box-shadow: 0 40px 50px #000;
+        box-shadow: 0 40px 50px #000;
+    }
+
+.banner-content {
+    position: absolute;
+    bottom: 17em;
+    left: 0;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+    .banner-content h2 {
+        color: #fff;
+        font-size: 4em;
+        font-weight: 700;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .banner-content p {
+        font-size: 1.5em;
+        font-weight: 500;
+        color: #0c131a;
+    }
+
+.stamp {
+    position: absolute;
+    bottom: -2.5em;
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+    .stamp img {
+        width: 5em;
+        height: 5em;
+    }
+/* //BANNER */
+
+/* ABOUT */
+.about {
+    text-align: center;
+}
+
+    .about .blog-post, .about .why-us, .about .about-gallery {
+        padding-top: 6em;
+        padding-bottom: 6em;
+    }
+
+    .about h2 {
+        font-size: 24px;
+        text-transform: uppercase;
+        padding-bottom: 20px;
+        font-weight: 700;
+    }
+
+.blog-post {
+}
+
+.blog-post-img {
+    background: url(../images/post1.jpg) no-repeat 0px 0px;
+    background-size: contain;
+    height: 140px;
+    width: 60%;
+    margin-left: 70px;
+    margin-right: 10px;
+    float: left;
+}
+
+.blog-post-nav {
+    float: left;
+}
+
+.blog-post h3 {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Josefin Sans', sans-serif;
+    padding-top: 12px;
+    float: left;
+}
+
+.blog-post .quote {
+    margin-top: 20px;
+    float: left;
+}
+
+.blog-post p {
+    font-size: 1em;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: auto;
+}
+
+.post-header {
+    padding-left: 6em;
+}
+
+.why-us {
+}
+
+    .why-us p {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: auto;
+    }
+
+    .why-us ul {
+        margin-right: 40px;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+        .why-us ul li::before {
+            content: "\2022";
+            margin-right: 10px;
+        }
+
+        .why-us ul li {
+            font-weight: 700;
+        }
+
+.why-us-img {
+    background: url(../images/logo2.jpg) no-repeat 0px 0px;
+    background-size: contain;
+    height: 5em;
+    width: auto;
+    margin-left: 5em;
+}
+
+.about-gallery {
+}
+
+.about-gallery-1 {
+    height: 9em;
+    width: auto;
+}
+
+.about-gallery-2 {
+    height: 9em;
+    width: auto;
+}
+
+.about-gallery-3 {
+    height: 9em;
+    width: auto;
+}
+/* //ABOUT */
+
+/* MEDIA QUERIES */
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1079px) {
+    #bar {
+        padding: 1em 0;
+    }
+
+    .row i {
+        font-size: 1em;
+    }
+
+    .row em {
+        font-size: 13px;
+        font-weight: 300;
+    }
+
+    .banner {
+        min-height: 650px;
+    }
+
+    .banner-content {
+        padding: 10em 0 0;
+    }
+}
+
+@media (max-width: 991px) {
+    #bar {
+        padding: 15px 0;
+    }
+
+    .row i {
+        font-size: 15px;
+    }
+
+    .row em {
+        font-size: 12px;
+        font-weight: 200;
+    }
+
+    .navbar-header {
+        padding-top: 22px;
+    }
+
+        .navbar-header img {
+            width: 8em;
+        }
+
+    .navbar-default .navbar-nav li a {
+        color: #fff;
+        font-size: 15px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .banner {
+        min-height: 500px;
+    }
+
+    .banner-content {
+        padding: 6.5em 0 0;
+    }
+
+        .banner-content h2 {
+            font-size: 3em;
+        }
+
+        .banner-content p {
+            font-size: 20px;
+        }
+
+    .stamp {
+        bottom: -2.2em;
+    }
+
+        .stamp img {
+            width: 4.4em;
+            height: 4.4em;
+        }
 }

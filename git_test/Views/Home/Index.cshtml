@@ -1,31 +1,101 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿<div class="banner">
+    <div class="container-fluid full-width">
+        <nav class="nav-script nav-custom navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header navbar-left">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="~/images/logo.png" />
+                </div>
+                <div class="fixed-top-collapse collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="home active"><a href="#">Home</a></li>
+                        <li class="about"><a href="#">About</a></li>
+                        <li class="services"><a href="#">Services</a></li>
+                        <li class="clients"><a href="#">Clients</a></li>
+                        <li class="stats"><a href="#">Stats</a></li>
+                        <li class="contact"><a href="#">Contact</a></li>
+                    </ul>
+                </div><!-- /navbar-collapse -->
+            </div><!-- /container -->
+        </nav>
+    </div><!-- /container-fluid -->
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+    <div class="container">
+        <div class="banner-content">
+            <h2>Make your businnes great</h2>
+            <p>With Lorem Ipsum </p>
+        </div><!-- /banner-content -->
+    </div><!-- /container -->
+    <div class="container">
+        <div class="stamp text-center"><img src="~/images/stamp.png" /></div>
+    </div><!-- /container -->
+</div><!-- /banner -->
+<!-- About -->
+<div class="about">
+    <div class="container">
+        <div class="blog-post col-md-4">
+            <h2>Recent Blog Posts</h2>
+            <div class="blog-post-img"></div>
+            <div class="blog-post-nav">
+                <span class="glyphicon glyphicon-menu-left"></span>
+                <span class="glyphicon glyphicon-menu-right"></span>
+            </div>
+            <div class="clearfix"></div>
+            <div class="post-header">
+                <h3>A little debate...</h3><span class="quote fa fa-quote-right"></span>
+                <div class="clearfix"></div>
+            </div>
+            <p>
+                Vivamus sit amet enim id tortor sagittis porta vitae nec erat. Vestibulum sit amet mattis eros.
+                Aliquam arcu magna, egestas nec justo id, finibus scelerisque ante.
+            </p>
+        </div>
+        <div class="why-us col-md-4">
+            <h2>Why Us ?</h2>
+            <p>Aliquam rutrum semper consectetur. Nulla quis posuere urna, a hendrerit enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <ul>
+                <li>Duis sit amet lectus efficitur</li>
+                <li>Duis in arcu mollis</li>
+                <li>Donec vehicula diam elit</li>
+            </ul>
+            <img src="~/App_Data/images/1.jpg" />
+            <div class="why-us-img"></div>
+        </div>
+        <div class="about-gallery col-md-4">
+            <img class="about-gallery-1" src="~/images/1.jpg" />
+            <img class="about-gallery-2" src="~/images/2.jpg" />
+            <img class="about-gallery-2" src="~/images/3.jpg" />
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        </div>
     </div>
 </div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+            $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 200) {
+                $(".about").addClass("active");
+                $(".home").removeClass("active");
+            }
+                else {
+                $(".home").addClass("active");
+                $(".about").removeClass("active");
+            }
+
+            if (scroll >=0) {
+                $(".nav-script").addClass("navbar-fixed-top");
+                }
+            else {
+            $(".nav-script").removeClass("navbar-fixed-top");
+            }
+        });
+</script>
