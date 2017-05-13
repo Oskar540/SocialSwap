@@ -70,7 +70,7 @@ ul {
 
 /* BANNER */
 .banner {
-    background: url(../App_Data/images/header.jpg) no-repeat 0px 0px;
+    background: url('../Views/images/header.jpg');
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
