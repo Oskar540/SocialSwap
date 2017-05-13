@@ -70,7 +70,7 @@ ul {
 
 /* BANNER */
 .banner {
-    background: url('../Views/images/header.jpg');
+    background: url('../images/header.jpg');
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -153,7 +153,7 @@ ul {
 }
 
 .blog-post-img {
-    background: url(../App_Data/images/post1.jpg) no-repeat 0px 0px;
+    background: url(../images/post1.jpg) no-repeat 0px 0px;
     background-size: contain;
     height: 140px;
     width: 60%;
@@ -215,7 +215,7 @@ ul {
         }
 
 .why-us-img {
-    background: url(../App_Data/images/logo2.jpg) no-repeat 0px 0px;
+    background: url(../images/logo2.jpg) no-repeat 0px 0px;
     background-size: contain;
     height: 5em;
     width: auto;
