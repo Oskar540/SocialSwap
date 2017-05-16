@@ -96,7 +96,9 @@ ul {
 }
 
 h2 {
+    font-family: 'Montserrat', sans-serif;
     color: #272727;
+    margin-top: 10px;
 }
 
 .full-width {
@@ -121,13 +123,15 @@ h2 {
     width: 130px;
 }
 
-    .button span {
+    .button > a {
+        color: #fff;
+        text-decoration: none;
         display: inline-block;
         position: relative;
         transition: 0.7s;
     }
 
-        .button span:after {
+        .button > a:after {
             content: '\00bb';
             position: absolute;
             opacity: 0;
@@ -136,11 +140,13 @@ h2 {
             transition: 1s;
         }
 
-    .button:hover span {
+    .button:hover a {
         padding-right: 10px;
+        color: #fff;
+        text-decoration: none;
     }
 
-        .button:hover span:after {
+        .button:hover a:after {
             opacity: 1;
             right: 0;
         }
@@ -165,17 +171,34 @@ h2 {
     }
 
 .navbar-default .navbar-nav li a {
-    color: #fff;
+    color: #fff !important;
     font-size: 1.1em;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 26px;
     padding-left: 30px;
     padding-right: 30px;
+    display: inline-block;
+    position: relative;
 }
 
+    .navbar-default .navbar-nav li a:after {
+        content: '';
+        display: block;
+        margin: auto;
+        height: 2px;
+        width: 0px;
+        background: transparent;
+        transition: width .5s ease, background-color .5s ease;
+    }
+
+    .navbar-default .navbar-nav li a:hover:after {
+        width: 100%;
+        background: #fff;
+    }
+
 .navbar-default .navbar-nav .active a, .navbar-default .navbar-nav .active a:hover {
-    background-color: rgba(27, 27, 27, 0.3);
-    color: #fff;
+    background-color: rgba(27, 27, 27, 0.5) !important;
+    color: #fff !important;
 }
 
 .navbar-fixed-top > .container > .fixed-top-collapse {
@@ -228,8 +251,7 @@ h2 {
     .banner-content h2 {
         color: #fff;
         font-size: 4em;
-        font-weight: 700;
-        font-family: 'Montserrat', sans-serif;
+        margin-top: 20px;
     }
 
     .banner-content p {
@@ -264,8 +286,8 @@ h2 {
 }
 
     .about1-akapit h2 {
-        font-family: 'Montserrat Alternates', sans-serif;
         margin-bottom: 1em;
+        margin-top: 20px;
     }
 
     .about1-akapit p {
@@ -286,7 +308,6 @@ h2 {
 
     .about2 h2 {
         color: #fff;
-        font-family: 'Montserrat', sans-serif;
     }
 
     .about2 p {
@@ -330,9 +351,270 @@ h2 {
         color: #515151;
         font-size: 3em;
     }
-
-
 /* //ABOUT */
+
+/* MOBILE SWAP */
+.mswap {
+    padding-top: 8em;
+    padding-bottom: 8em;
+    height: 700px;
+}
+
+.mswap-image {
+    background: url(../images/852.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    height: 444px;
+}
+
+.mswap-akapit {
+    padding-top: 6em;
+    padding-right: 10em;
+    padding-left: 18em;
+}
+
+    .mswap-akapit h2 {
+        margin-bottom: 1.5em;
+    }
+
+    .mswap-akapit .button {
+        margin-top: 1em;
+        width: 150px;
+    }
+/* //MOBILE SWAP */
+
+/* STATS */
+.stats {
+    background: url(../images/853.png) no-repeat 0px 0px;
+    background-size: cover;
+    min-height: 300px;
+    text-align: center;
+    padding-top: 4em;
+    padding-bottom: 6em;
+}
+
+    .stats h2 {
+        color: #fff;
+        margin-bottom: 10px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+    }
+
+    .stats h3 {
+        color: #fff;
+        font-size: 1em;
+        font-weight: 400;
+    }
+
+    .stats p {
+        color: #fff;
+        margin-bottom: 4em;
+    }
+
+/* //STATS */
+.team {
+    padding-top: 4em;
+    padding-bottom: 4em;
+    height: 650px;
+    text-align: center;
+}
+
+    .team .card {
+        background-color: #272727;
+        padding-top: 2em;
+        height: 22em;
+    }
+
+    .team .col-md-3 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+.team-img {
+    margin-bottom: 1em;
+}
+
+.team1-img {
+    background: url(../images/t1.png) no-repeat 0px 0px;
+    background-size: contain;
+    width: 6em;
+    height: 6em;
+    margin: 0 auto;
+}
+
+.team2-img {
+    background: url(../images/t2.png) no-repeat 0px 0px;
+    background-size: contain;
+    width: 6em;
+    height: 6em;
+    margin: 0 auto;
+}
+
+.team3-img {
+    background: url(../images/t3.png) no-repeat 0px 0px;
+    background-size: contain;
+    width: 6em;
+    height: 6em;
+    margin: 0 auto;
+}
+
+.team4-img {
+    background: url(../images/t4.png) no-repeat 0px 0px;
+    background-size: contain;
+    width: 6em;
+    height: 6em;
+    margin: 0 auto;
+}
+
+.team h3 {
+    font-size: 1em;
+    color: #eee;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+.team p {
+    color: #272727;
+    margin-top: 1em;
+}
+
+.team .card p {
+    color: #ccc;
+    font-size: 12px;
+}
+
+.team-icons {
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-top: 1em;
+}
+
+.team .social-icon {
+    font-size: 24px;
+}
+
+.team .fa-facebook, .fa-linkedin, .fa-github {
+    transition: all .3s ease-in-out;
+}
+
+    .team .fa-facebook:hover {
+        cursor: pointer;
+        color: #6d84b4;
+        transform: scale(1.3);
+    }
+
+.team .fa-linkedin:hover {
+    cursor: pointer;
+    color: #007bb5;
+    transform: scale(1.3);
+}
+
+.team .fa-github:hover {
+    cursor: pointer;
+    color: #999;
+    transform: scale(1.3);
+}
+/* //TEAM */
+
+/* FOOTER */
+.footer {
+    -webkit-box-shadow: -4px 0 30px #272727;
+    -moz-box-shadow: 0 -4px 30px #272727;
+    box-shadow: 0 -4px 30px #272727;
+}
+
+.footer-info {
+    background-color: #272727;
+    min-height: 400px;
+    padding-top: 6em;
+    padding-bottom: 6em;
+}
+
+.info {
+    text-align: center;
+}
+
+    .info img {
+        width: 18em;
+    }
+
+    .info p {
+        color: #999999;
+    }
+
+    .info h2 {
+        margin-top: 1em;
+        color: #fff;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .info h3 {
+        color: #aaaaaa;
+    }
+
+        .info h3 span {
+            color: #f26c4e;
+        }
+
+    .info h4 {
+        margin-top: 2em;
+        color: #fff;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        float: left;
+    }
+
+.smedia-wrapper {
+    margin-top: 2em;
+}
+
+.smedia-center {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.smedia .social-icon {
+    color: #cccccc;
+    font-size: 2em;
+}
+
+.smedia .fa-facebook-square, .fa-youtube-play, .fa-snapchat {
+    transition: all .3s ease-in-out;
+}
+
+    .smedia .fa-facebook-square:hover {
+        cursor: pointer;
+        color: #6d84b4;
+        transform: scale(1.3);
+    }
+
+.smedia .fa-youtube-play:hover {
+    cursor: pointer;
+    color: #e52d27;
+    transform: scale(1.3);
+}
+
+.smedia .fa-snapchat:hover {
+    cursor: pointer;
+    color: #fffc00;
+    transform: scale(1.3);
+}
+
+.credits {
+    background-color: #111111;
+    height: 6em;
+    text-align: center;
+    padding-top: 2.5em;
+    line-height: 1em;
+}
+
+    .credits p {
+        color: #ccc;
+        font-size: 1em;
+    }
+/* //FOOTER */
 
 /* MEDIA QUERIES */
 @media (max-width: 1200px) {
