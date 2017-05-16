@@ -4,5 +4,12 @@
 }
 
 @if (Session["UserId"] != null)
-    { <h2>Witaj @Session["Username"].ToString()</h2>      }
+{
+    <h2>Witaj @Session["Username"].ToString()</h2>     
+    <button>@Html.ActionLink("Wyloguj się","Logout")</button>
+
+
+
+
+}
 
