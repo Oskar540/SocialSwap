@@ -76,5 +76,11 @@ namespace git_test.Controllers
                 return RedirectToAction("Login");
             }
         }
+
+        public ActionResult Logout()
+        {
+            Session.Abandon();
+            return RedirectToAction("Login");
+        }
     }
 }
