@@ -29,7 +29,7 @@ namespace git_test.Controllers
             {
                 using (OurDbContex db = new OurDbContex())
                 {
-                    db.userAccount.Add(account);
+                    //db.userAccount.Add(account);
                     db.SaveChanges();
 
                     ModelState.Clear();
@@ -49,7 +49,7 @@ namespace git_test.Controllers
         { using (OurDbContex db = new OurDbContex())
           {
                 var usr = db.userAccount.Where(u => u.Username == user.Username && u.Password == user.Password).FirstOrDefault();
-                if(usr != null)
+                if (usr != null)
                 {
                     Session["UserId"] = usr.UserId.ToString();
                     Session["Username"] = usr.Username.ToString();
@@ -59,7 +59,7 @@ namespace git_test.Controllers
                 {
                     ModelState.AddModelError("", "Nieprawidłowe hasło lub login");
                 }
-          }
+            }
             return View();
                
         }

@@ -29,6 +29,6 @@ namespace git_test.Models
 
         public string ConfirmPassword { get; set; }
 
-        public string hobby { get; set; }
+        //public string hobby { get; set; }
     }
 }

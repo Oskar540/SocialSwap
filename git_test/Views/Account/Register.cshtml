@@ -71,16 +71,16 @@
         </div>
 
         <div>
-            <input type="checkbox" value="1" id="HobbyA" />
-            <label for="HobbyA">HobbyA</label>
-            <input type="checkbox" value="2" id="HobbyB" />
-            <label for="HobbyB">HobbyB</label>
-            <input type="checkbox" value="3" id="HobbyC" />
-            <label for="hobby">HobbyC</label>
-            <input type="checkbox" value="4" id="HobbyD" />
-            <label for="hobby">HobbyD</label>
-            <input type="checkbox" value="5" id="HobbyE" />
-            <label for="hobby">HobbyE</label>
+            <input type="checkbox" class="hobby" />
+            <label for="hobby">Sport</label>
+            <input type="checkbox" class="hobby" />
+            <label for="hobby">Motoryzacja</label>
+            <input type="checkbox" class="hobby" />
+            <label for="hobby">Muzyka</label>
+            <input type="checkbox" class="hobby" />
+            <label for="hobby">Informatyka</label>
+            <input type="checkbox" class="hobby" />
+            <label for="hobby">Moda</label>
         </div>
 
        
@@ -124,13 +124,14 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />
+                <button class="btn btn-default">@Html.ActionLink("Login", "Login", "Account")</button>
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Home", "Index")
 </div>
 
 @section Scripts {
