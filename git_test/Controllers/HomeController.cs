@@ -26,5 +26,12 @@ namespace git_test.Controllers
 
             return View();
         }
+
+        public ActionResult Chat()
+        {
+            ViewBag.Message = "Chat with SocialSwap members!";
+
+            return View();
+        }
     }
 }

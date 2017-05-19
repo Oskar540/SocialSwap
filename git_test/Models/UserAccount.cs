@@ -28,5 +28,7 @@ namespace git_test.Models
         [Required(ErrorMessage = "Potwierdź hasło")]
 
         public string ConfirmPassword { get; set; }
+
+        public string hobby { get; set; }
     }
 }

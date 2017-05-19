@@ -7,9 +7,40 @@
 {
     <h2>Witaj @Session["Username"].ToString()</h2>     
     <button>@Html.ActionLink("Wyloguj się","Logout")</button>
+}
 
+@if (Html.Id("Hobby") != null)
+{
+    string hobby_d = "";
+    if (Convert.ToString(Html.Id("HobbyA")) == Convert.ToString(1))
+    {
+        hobby_d += "1";
+    }
+    else { hobby_d += "0"; }
+    if (Convert.ToString(Html.Id("HobbyB")) == Convert.ToString(2))
+    {
 
+        hobby_d += "1";
+    }
+    else { hobby_d += "0"; }
+    if (Convert.ToString(Html.Id("HobbyC")) == Convert.ToString(3))
+    {
 
+        hobby_d += "1";
+    }
+    else { hobby_d += "0"; }
+    if (Convert.ToString(Html.Id("HobbyD")) == Convert.ToString(4))
+    {
 
+        hobby_d += "1";
+    }
+    else { hobby_d += "0"; }
+    if (Convert.ToString(Html.Id("HobbyE")) == Convert.ToString(5))
+    {
+
+        hobby_d += "1";
+    }
+    else { hobby_d += "0"; }
+    @hobby_d
 }
 

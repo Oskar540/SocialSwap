@@ -33,7 +33,7 @@ namespace git_test.Controllers
                     db.SaveChanges();
 
                     ModelState.Clear();
-                    ViewBag.Message = account.FirstName+" "+account.LastName+" konto zostało zarejestrowane";
+                    ViewBag.Message = account.FirstName + " " + account.LastName + " konto zostało zarejestrowane";
                 }
             }
             return View();
@@ -81,6 +81,15 @@ namespace git_test.Controllers
         {
             Session.Abandon();
             return RedirectToAction("Login");
+        }
+
+        public ActionResult Chat(UserAccount user)
+        {
+            int user_id = user.UserId;
+            Message msg = new Message();
+            
+
+            return ViewBag;
         }
     }
 }
