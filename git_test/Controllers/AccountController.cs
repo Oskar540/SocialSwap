@@ -49,17 +49,17 @@ namespace git_test.Controllers
         { using (OurDbContex db = new OurDbContex())
           {
                 var usr = db.userAccount.Where(u => u.Username == user.Username && u.Password == user.Password).FirstOrDefault();
-                if (usr != null)
-                {
+        //        if (usr != null)
+        //        {
                     Session["UserId"] = usr.UserId.ToString();
                     Session["Username"] = usr.Username.ToString();
                     return RedirectToAction("LoggedIn");
-                }
-                else
-                {
-                    ModelState.AddModelError("", "Nieprawidłowe hasło lub login");
-                }
-            }
+        //        }
+        //        else
+        //        {
+        //            ModelState.AddModelError("", "Nieprawidłowe hasło lub login");
+        //        }
+           }
             return View();
                
         }
