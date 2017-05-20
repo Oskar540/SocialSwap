@@ -82,5 +82,10 @@ namespace git_test.Controllers
             Session.Abandon();
             return RedirectToAction("Login");
         }
+
+        public ActionResult Friends()
+        {
+            return View();
+        }
     }
 }

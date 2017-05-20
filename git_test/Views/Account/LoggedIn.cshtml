@@ -3,11 +3,13 @@
     ViewBag.Title = "LoggedIn";
 }
 
+<div>
+    <button class="btn btn-default">@Html.ActionLink("Your Friends", "Friends", "Account")</button></div>
+
 @if (Session["UserId"] != null)
 {
     <h2>Witaj @Session["Username"].ToString()</h2>     
     <button>@Html.ActionLink("Wyloguj się","Logout")</button>
-
 
 }
 

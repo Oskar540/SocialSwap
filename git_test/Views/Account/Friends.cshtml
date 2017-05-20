@@ -1,0 +1,43 @@
+﻿@using System
+@using System.Collections.Generic
+
+
+@{
+    ViewBag.Title = "Friends";
+}
+<h2>Friends</h2>
+
+<h4>Add Friend</h4>
+
+<l>Aktualnie nie posiadasz żadnych SwapZnajomych. Czy chciałbyś kilku zaprosić?</l>
+
+@{
+    string[] names = new string[] { "Adam", "Jan", "Tomasz", "Kamil", "Jakub", "Patrycja", "Agnieszka", "Katarzyna", "Ala", "Ola" };
+    string[] surnames = new string[] { "Nowak", "Kowalik", "Woźniak", "Mazur", "Krawczyk", "Marciniec", "Fil", "Joniec", "Kruk", "Czaja" };
+    string[] cities = new string[] { "Wrocław", "Warszawa", "Poznań", "Rzeszów", "Lublin" };
+    }
+
+@{
+    Random rnd = new Random();
+    //var r = rnd.Next(0, 11);
+}
+
+@for (var i = 0; i < 10; i++)
+    {
+    <div>
+        <div class="add">
+        @names[rnd.Next(0, 9)] @surnames[rnd.Next(0, 9)]
+        <br />
+        @*var r = rnd.Next(0, 6);*@
+        @cities[rnd.Next(0, 4)]
+        </div>
+        <button class="add_b" type="submit" name="button" onlick="ShowDiv()">Dodaj znajomego</button>
+        <button class="add_b" type="submit" name="button" onlick="ShowDiv()" style="display: none;">Dodaj znajomego</button>
+        <br />
+    </div>
+    }
+}
+
+
+
+
