@@ -29,11 +29,11 @@ namespace git_test.Controllers
             {
                 using (OurDbContex db = new OurDbContex())
                 {
-                    //db.userAccount.Add(account);
+                    db.userAccount.Add(account);
                     db.SaveChanges();
 
                     ModelState.Clear();
-                    ViewBag.Message = account.FirstName + " " + account.LastName + " konto zostało zarejestrowane";
+                    ViewBag.Message = account.FirstName+" "+account.LastName+" konto zostało zarejestrowane";
                 }
             }
             return View();
@@ -49,17 +49,17 @@ namespace git_test.Controllers
         { using (OurDbContex db = new OurDbContex())
           {
                 var usr = db.userAccount.Where(u => u.Username == user.Username && u.Password == user.Password).FirstOrDefault();
-        //        if (usr != null)
-        //        {
-                    Session["UserId"] = usr.UserId.ToString();
-                    Session["Username"] = usr.Username.ToString();
+                if(user != null)
+                {
+                    Session["UserId"] = user.UserId.ToString();
+                    Session["Username"] = user.Username.ToString();
                     return RedirectToAction("LoggedIn");
-        //        }
-        //        else
-        //        {
-        //            ModelState.AddModelError("", "Nieprawidłowe hasło lub login");
-        //        }
-           }
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Nieprawidłowe hasło lub login");
+                }
+          }
             return View();
                
         }
@@ -81,15 +81,6 @@ namespace git_test.Controllers
         {
             Session.Abandon();
             return RedirectToAction("Login");
-        }
-
-        public ActionResult Chat(UserAccount user)
-        {
-            int user_id = user.UserId;
-            Message msg = new Message();
-            
-
-            return ViewBag;
         }
     }
 }

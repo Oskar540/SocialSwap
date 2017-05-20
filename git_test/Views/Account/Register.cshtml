@@ -1,5 +1,4 @@
-﻿@using git_test.Models
-@model git_test.Models.UserAccount
+﻿@model git_test.Models.UserAccount
 
 @{
     ViewBag.Title = "Register";
@@ -8,15 +7,15 @@
 <h2>Register</h2>
 
 
-@using (Html.BeginForm())
+@using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
-
+    
     <div class="form-horizontal">
         <h4>UserAccount</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @if (ViewBag.Message != null)
+        @if(ViewBag.Message != null)
         {
             <div class="form-group">
                 <div class="col-md-10">@ViewBag.Message</div>
@@ -71,56 +70,18 @@
         </div>
 
         <div>
-            <input type="checkbox" class="hobby" />
-            <label for="hobby">Sport</label>
-            <input type="checkbox" class="hobby" />
-            <label for="hobby">Motoryzacja</label>
-            <input type="checkbox" class="hobby" />
-            <label for="hobby">Muzyka</label>
-            <input type="checkbox" class="hobby" />
-            <label for="hobby">Informatyka</label>
-            <input type="checkbox" class="hobby" />
-            <label for="hobby">Moda</label>
+        <input type="checkbox" class="checkbox" />
+        <label for=" checkbox">Sport</label>
+        <input type="checkbox" class="checkbox" />
+        <label for=" checkbox">Music</label>
+        <input type="checkbox" class="checkbox" />
+        <label for=" checkbox">Automotive</label>
+        <input type="checkbox" class="checkbox" />
+        <label for=" checkbox">IT</label>
+        <input type="checkbox" class="checkbox" />
+        <label for=" checkbox">Fashion</label>
         </div>
 
-       
-
-        @*@if (Html.Id("Hobby") != null)
-        {
-            string hobbie_d = "";
-            if (Convert.ToString(Html.Id("HobbyA")) == Convert.ToString(1))
-            {
-                hobbie_d += "1";
-            }
-            else { hobbie_d += "0"; }
-            if (Convert.ToString(Html.Id("HobbyB")) == Convert.ToString(2))
-            {
-
-                hobbie_d += "1";
-            }
-            else { hobbie_d += "0"; }
-            if (Convert.ToString(Html.Id("HobbyC")) == Convert.ToString(3))
-            {
-
-                hobbie_d += "1";
-            }
-            else { hobbie_d += "0"; }
-            if (Convert.ToString(Html.Id("HobbyD")) == Convert.ToString(4))
-            {
-
-                hobbie_d += "1";
-            }
-            else { hobbie_d += "0"; }
-            if (Convert.ToString(Html.Id("HobbyE")) == Convert.ToString(5))
-            {
-
-                hobbie_d += "1";
-            }
-            else { hobbie_d += "0"; }
-        }*@
-       
-        
-        
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />
@@ -131,7 +92,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Home", "Index")
+    @Html.ActionLink("Back to List", "Index", "Home")
 </div>
 
 @section Scripts {
