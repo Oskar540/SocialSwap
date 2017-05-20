@@ -77,6 +77,40 @@ namespace git_test.Controllers
             }
         }
 
+        // Thing
+        public ActionResult AddThing()
+        {
+             if(Session["UserId"]!=null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login");
+            }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddThing(Thing thing)
+        {
+            if (ModelState.IsValid)
+            {
+                using (ThingDbContex db = new ThingDbContex())
+                {
+                   
+
+                    db.Thing.Add(thing);
+                    db.SaveChanges();
+
+                    ModelState.Clear();
+                    ViewBag.Message = thing.Name +" został dodadany";
+                }
+            }
+            return View();
+        }
+
+
         public ActionResult Logout()
         {
             Session.Abandon();
