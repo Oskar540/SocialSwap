@@ -1,4 +1,5 @@
-﻿
+﻿@model IEnumerable<git_test.Models.Thing>
+
 @{
     ViewBag.Title = "LoggedIn";
 }
@@ -123,28 +124,23 @@
             <div class="dot"></div>
         </div>
         <div class="col-md-11">
-            <div class="row postrow1">
-                <div class="col-md-1 triangle-left"></div>
-                <div class="col-md-11 post-txt">
-                    <h3>@Session["Username"].ToString()</h3>
-                    <div class="clearfix"></div>
-                    <h5>Wtorek 19:32</h5>
-                    <p>Ut mattis non erat sed vestibulum. Quisque aliquam massa tortor, nec mollis ante commodo at! :)</p>
-                </div>
-            </div>
-            <div class="row postrow2">
-                <div class="col-md-1 triangle-left"></div>
-                <div class="col-md-11 post-txt">
-                    <h3>@Session["Username"].ToString()</h3>
 
-                    <div class="clearfix"></div>
-                    <h5>Wtorek 19:32</h5>
-                    <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam imperdiet vitae arcu eu posuere. Duis at mollis nisl.</p>
-                    <div class="post-img"></div>
+                @foreach (var item in Model)
+                {
 
-                </div>
-            </div>
-        </div>
+                    <div class="row postrow1">
+                        <div class="col-md-1 triangle-left"></div>
+                        <div class="col-md-11 post-txt">
+                            <h3>@Html.DisplayFor(modelItem => item.Username)</h3>
+                            <div class="clearfix"></div>
+                            <h5>@Html.DisplayFor(modelItem => item.Name)</h5>
+                            <p> @Html.DisplayFor(modelItem => item.Describe)</p>
+                        </div>
+                    </div>
+         
+                }
+             
+</div>
     </div>
 </div>
 <!-- /about -->

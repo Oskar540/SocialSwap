@@ -73,8 +73,13 @@ namespace git_test.Controllers
         {
             if(Session["UserId"]!=null)
             {
-                return View();
-            }
+                using (ThingDbContex db = new ThingDbContex())
+                {
+                    return View(db.Thing.ToList());
+
+                }
+               
+}
             else
             {
                 return RedirectToAction("Login");
@@ -113,6 +118,8 @@ namespace git_test.Controllers
             }
             return View();
         }
+
+       
 
 
         public ActionResult Logout()
