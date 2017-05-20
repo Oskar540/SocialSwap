@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-<<<<<<< HEAD
-=======
+
+
 using System.ComponentModel.DataAnnotations;
->>>>>>> refs/remotes/origin/master
+
 using System.Linq;
 using System.Web;
 
@@ -11,8 +11,7 @@ namespace git_test.Models
 {
     public class Thing
     {
-<<<<<<< HEAD
-=======
+
         [Key]
         public int ThingId { get; set; }
         public int UserId { get; set; }
@@ -22,6 +21,6 @@ namespace git_test.Models
         public string Describe { get; set; }
         [Required]
         public string Tags { get; set; }
->>>>>>> refs/remotes/origin/master
+
     }
 }
