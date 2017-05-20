@@ -14,7 +14,7 @@ namespace git_test.Models
 
         [Key]
         public int ThingId { get; set; }
-        public int UserId { get; set; }
+        public string Username { get; set; }
         [MaxLength(25,ErrorMessage = "Nazwa moze miec tylko 25 znakow")]
         public string Name { get; set; }
         [Required]
