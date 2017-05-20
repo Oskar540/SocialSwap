@@ -26,7 +26,15 @@ namespace git_test.Models
         [Compare("Password",ErrorMessage = "Hasła nie pasują")]
         [DataType(DataType.Password)]
         [Required(ErrorMessage = "Potwierdź hasło")]
-
         public string ConfirmPassword { get; set; }
+        [Required(ErrorMessage = "to pole jest wymagane")]
+        public string Describe { get; set; }
+        [Required(ErrorMessage = "to pole jest wymagane")]
+        public string Location { get; set; }
+        [Required(ErrorMessage = "to pole jest wymagane")]
+        public string Numer { get; set; }
+        public string Hobby { get; set; }
+
+
     }
 }

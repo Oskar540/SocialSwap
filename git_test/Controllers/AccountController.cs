@@ -53,6 +53,10 @@ namespace git_test.Controllers
                 {
                     Session["UserId"] = usr.UserId.ToString();
                     Session["Username"] = usr.Username.ToString();
+                    Session["Hobby"] = usr.Hobby.ToString();
+                    Session["Location"] = usr.Location.ToString();
+                    Session["Numer"] = usr.Numer.ToString();
+                    Session["Describe"] = usr.Describe.ToString();
                     return RedirectToAction("LoggedIn");
                 }
                 else
@@ -76,6 +80,40 @@ namespace git_test.Controllers
                 return RedirectToAction("Login");
             }
         }
+
+        // Thing
+        public ActionResult AddThing()
+        {
+             if(Session["UserId"]!=null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login");
+            }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddThing(Thing thing)
+        {
+            if (ModelState.IsValid)
+            {
+                using (ThingDbContex db = new ThingDbContex())
+                {
+                   
+
+                    db.Thing.Add(thing);
+                    db.SaveChanges();
+
+                    ModelState.Clear();
+                    ViewBag.Message = thing.Name +" został dodadany";
+                }
+            }
+            return View();
+        }
+
 
         public ActionResult Logout()
         {

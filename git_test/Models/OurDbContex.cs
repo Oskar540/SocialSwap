@@ -8,6 +8,9 @@ namespace git_test.Models
 {
     public class OurDbContex : DbContext
     {
+        public OurDbContex() : base("socialswapconnection")
+        {}
+
         public DbSet<UserAccount> userAccount { get; set; }
     }
 }
