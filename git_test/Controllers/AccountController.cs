@@ -53,6 +53,10 @@ namespace git_test.Controllers
                 {
                     Session["UserId"] = usr.UserId.ToString();
                     Session["Username"] = usr.Username.ToString();
+                    Session["Hobby"] = usr.Hobby.ToString();
+                    Session["Location"] = usr.Location.ToString();
+                    Session["Numer"] = usr.Numer.ToString();
+                    Session["Describe"] = usr.Describe.ToString();
                     return RedirectToAction("LoggedIn");
                 }
                 else

@@ -5,11 +5,271 @@
 
 @if (Session["UserId"] != null)
 {
-    <h2>Witaj @Session["Username"].ToString()</h2>     
-    <button>@Html.ActionLink("Wyloguj się","Logout")</button>
-    <button>@Html.ActionLink("Dodaj Przedmiot", "AddThing")</button>
+
+
 
 
 
 }
+<div class="userbanner">
+    <div class="container-fluid full-width">
+        <nav class="nav-script nav-custom navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header navbar-left">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="../images/logo.png" />
+                </div>
+                <div class="fixed-top-collapse collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="home active">@Html.ActionLink("Dodaj Przedmiot", "AddThing")</li>
+                        <li class="home active">@Html.ActionLink("Wyloguj się", "Logout")</li>
+    
+                    </ul>
+                </div><!-- /navbar-collapse -->
+            </div><!-- /container -->
+        </nav>
+        <nav class="unvisible sticky-nav-script sticky-nav-custom navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header navbar-left">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="../images/logo.png" />
+                </div>
+                <div class="fixed-top-collapse collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="home active" target1="banner"><a>Home</a></li>
+                        <li class="aboutnav" target2="about1"><a>O nas</a></li>
+                        <li class="services" target3="mswap"><a>MobileSwap</a></li>
+                        <li class="statsnav" target4="stats"><a>Stats</a></li>
+                        <li class="teamnav" target5="team"><a>Zespół</a></li>
+                        <li class="contactnav" target6="footer"><a>Kontakt</a></li>
+                    </ul>
+                </div><!-- /navbar-collapse -->
+            </div><!-- /container -->
+        </nav>
+    </div><!-- /container-fluid -->
+
+    <div class="container">
+        <div class="userbanner-content">
+            <h2>Profil Swapera</h2>
+            <p>Social Swap</p>
+        </div><!-- /banner-content -->
+    </div><!-- /container -->
+    <div class="container">
+        <div class="stamp text-center"></div>
+    </div><!-- /container -->
+</div><!-- /banner -->
+<!-- about -->
+<div class="userabout">
+    <div class="container">
+        <div class="userimg"><img src="../images/avatar.png" /></div>
+        <div class="userdescription">
+            <h3>@Session["Username"].ToString()</h3>
+            <p>@Session["Hobby"].ToString()</p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid full-width">
+    <div class="about2">
+        <h2>Poznaj Swapera</h2>
+        <p>Informacje o użytkowniku</p>
+        <div class="container">
+            <div class="col-md-4">
+                <div class="card">
+                    <span class="fa fa-info"></span>
+                    <h3>Informacje</h3>
+                    <div class="description">
+                    
+                       
+                        <p><b>Telefon:</b>@Session["Numer"].ToString()</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <span class="fa fa-map-marker"></span>
+                    <h3>Lokalizacja</h3>
+                    <div class="description">
+                        <p><b>Ognisko:</b> @Session["Location"].ToString()</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <span class="fa fa-paper-plane"></span>
+                    <h3>Opis</h3>
+                    <div class="description">
+                        <p>@Session["Describe"].ToString()</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tl-wrapper">
+    <div class="timeline">
+        <h2 style="margin-bottom: 2em;">Ostatnia aktywność</h2>
+        <div class="col-md-1">
+            <div class="dot"></div>
+        </div>
+        <div class="col-md-11">
+            <div class="row postrow1">
+                <div class="col-md-1 triangle-left"></div>
+                <div class="col-md-11 post-txt">
+                    <h3>@Session["Username"].ToString()</h3>
+                    <div class="clearfix"></div>
+                    <h5>Wtorek 19:32</h5>
+                    <p>Ut mattis non erat sed vestibulum. Quisque aliquam massa tortor, nec mollis ante commodo at! :)</p>
+                </div>
+            </div>
+            <div class="row postrow2">
+                <div class="col-md-1 triangle-left"></div>
+                <div class="col-md-11 post-txt">
+                    <h3>@Session["Username"].ToString()</h3>
+
+                    <div class="clearfix"></div>
+                    <h5>Wtorek 19:32</h5>
+                    <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam imperdiet vitae arcu eu posuere. Duis at mollis nisl.</p>
+                    <div class="post-img"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /about -->
+<!-- stats -->
+<div class="stats">
+    <div class="container">
+        <h2>Statystyki Swapera</h2>
+        <p>Zobacz aktywność użytkownika w sieci SS</p>
+        <div class="stat1 col-md-4">
+            <h2 class="counter">3</h2>
+            <h3>Grupy Hobbystów</h3>
+        </div>
+        <div class="stat1 col-md-4">
+            <h2 class="counter">6</h2>
+            <h3>Dokonanych wymian</h3>
+        </div>
+        <div class="stat1 col-md-4">
+            <h2 class="counter">11</h2>
+            <h3>Udziałów w eventach</h3>
+        </div>
+    </div>
+</div>
+<!-- /stats -->
+<!-- team -->
+<div class="items">
+    <h2>Opublikowane Swapy</h2>
+    <div class="container">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="team-img"><div class="team1-img"></div></div>
+                <h3>@Session["Username"].ToString()</h3>
+                <p>Morbi hendrerit felis vitae magna ultrices, nec lobortis est dictum. Etiam eleifend elementum leo, quis rutrum massa consequat ut.</p>
+                <div class="team-icons">
+                    <div class="icon-fb col-md-4"><a href="https://www.facebook.com/kamsonpc" target="_blank"><span class="social-icon fa fa-facebook"></span></a></div>
+                    <div class="icon-in col-md-4"><a href="https://www.linkedin.com/in/kamil-b%C4%85czek-09477611a/" target="_blank"><span class="social-icon fa fa-linkedin"></span></a></div>
+                    <div class="icon-git col-md-4"><a href="https://github.com/kamsonpc" target="_blank"><span class="social-icon fa fa-github"></span></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="team-img"><div class="team2-img"></div></div>
+                <h3>Bartek Hajder</h3>
+                <p>Morbi hendrerit felis vitae magna ultrices, nec lobortis est dictum. Etiam eleifend elementum leo, quis rutrum massa consequat ut.<p>
+                    <div class="team-icons">
+                        <div class="icon-fb col-md-4"><a href="https://www.facebook.com/bartek.hajder" target="_blank"><span class="social-icon fa fa-facebook"></span></a></div>
+                        <div class="icon-in col-md-4"><a href="https://www.linkedin.com/in/hajderbartlomiej/" target="_blank"><span class="social-icon fa fa-linkedin"></span></a></div>
+                        <div class="icon-git col-md-4"><a href="https://github.com/UnikalBartek" target="_blank"><span class="social-icon fa fa-github"></span></a></div>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="team-img"><div class="team3-img"></div></div>
+                <h3>Oskar Bzdoń</h3>
+                <p>Morbi hendrerit felis vitae magna ultrices, nec lobortis est dictum. Etiam eleifend elementum leo, quis rutrum massa consequat ut.</p>
+                <div class="team-icons">
+                    <div class="icon-fb col-md-4"><a href="https://www.facebook.com/oskar.bzdon" target="_blank"><span class="social-icon fa fa-facebook"></span></a></div>
+                    <div class="icon-in col-md-4"><a href="https://www.linkedin.com/in/oskar-bzdo%C5%84-8b5566143/" target="_blank"><span class="social-icon fa fa-linkedin"></span></a></div>
+                    <div class="icon-git col-md-4"><a href="https://github.com/Oskar540" target="_blank"><span class="social-icon fa fa-github"></span></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /team -->
+<!-- footer -->
+<div class="footer">
+    <div class="footer-info">
+        <div class="container">
+            <div class="info">
+                <img src="../images/logo.png" />
+                <p>Lokalna platforma wymian<br />zrzeszająca hobbystów</p>
+                <h2>Skontaktuj się z nami mailowo:</h2>
+                <h3>socialswap<span>&commat;</span>gmail.com</h3>
+                <div class="smedia-wrapper">
+                    <div class="smedia-center">
+                        <div class="smedia col-md-4"><a href="#"><span class="social-icon fa fa-facebook-square"></a></span></div>
+                        <div class="smedia col-md-4"><a href="#"><span class="social-icon fa fa-youtube-play"></a></span></div>
+                        <div class="smedia col-md-4"><a href="#"><span class="social-icon fa fa-snapchat"></a></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="credits">
+        <div class="container">
+            <p>&copy; SocialSwap 2017 | All rights reserved</p>
+        </div>
+    </div>
+</div>
+<!-- /footer -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/navigation.js"></script><!-- obsługa animacji nav'u -->
+<script src="../js/scroll.js"></script><!-- nav click scroll -->
+<!-- stats -->
+<script src="../js/waypoints.min.js"></script>
+<script src="../js/counterup.min.js"></script>
+<script>
+    jQuery(document).ready(function ($) {
+        $('.counter').counterUp({
+            delay: 30,
+            time: 500
+        });
+    });
+</script>
+<!-- //stats -->
+
+
+
+<script>
+    var pageShowTime;
+
+    function showPageTimeout() {
+        pageShowTime = setTimeout(showPage, 3000);
+    }
+
+    function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("content").style.display = "block";
+    }
+</script>
+
+<!--</div><!-- //#content -->
 
