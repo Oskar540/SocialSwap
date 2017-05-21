@@ -1,6 +1,4 @@
-﻿<div id="loader"></div>
-<div style="display:none;" id="content" class="animate-bottom">
-    <div class="banner">
+﻿    <div class="banner">
         <div class="container-fluid full-width">
             <nav class="nav-script nav-custom navbar navbar-default">
                 <div class="container">
@@ -15,12 +13,12 @@
                     </div>
                     <div class="fixed-top-collapse collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="home active"><a href="#">Home</a></li>
-                            <li class="aboutnav"><a href="#">O nas</a></li>
-                            <li class="services"><a href="#">MobileSwap</a></li>
-                            <li class="clients"><a href="#">Stats</a></li>
-                            <li class="stats"><a href="#">Zespół</a></li>
-                            <li class="contact"><a href="#">Kontakt</a></li>
+                            <li class="home active" target1="banner"><a>Home</a></li>
+                            <li class="aboutnav" target2="about1"><a>O nas</a></li>
+                            <li class="services" target3="mswap"><a>MobileSwap</a></li>
+                            <li class="statsnav" target4="stats"><a>Stats</a></li>
+                            <li class="teamnav" target5="team"><a>Zespół</a></li>
+                            <li class="contactnav" target6="footer"><a>Kontakt</a></li>
                         </ul>
                     </div><!-- /navbar-collapse -->
                 </div><!-- /container -->
@@ -38,12 +36,12 @@
                     </div>
                     <div class="fixed-top-collapse collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="home active"><a href="#">Home</a></li>
-                            <li class="aboutnav"><a href="#">O nas</a></li>
-                            <li class="services"><a href="#">MobileSwap</a></li>
-                            <li class="clients"><a href="#">Stats</a></li>
-                            <li class="stats"><a href="#">Zespół</a></li>
-                            <li class="contact"><a href="#">Kontakt</a></li>
+                            <li class="home active" target1="banner"><a>Home</a></li>
+                            <li class="aboutnav" target2="about1"><a>O nas</a></li>
+                            <li class="services" target3="mswap"><a>MobileSwap</a></li>
+                            <li class="statsnav" target4="stats"><a>Stats</a></li>
+                            <li class="teamnav" target5="team"><a>Zespół</a></li>
+                            <li class="contactnav" target6="footer"><a>Kontakt</a></li>
                         </ul>
                     </div><!-- /navbar-collapse -->
                 </div><!-- /container -->
@@ -54,7 +52,8 @@
             <div class="banner-content">
                 <h2>Witaj w SocialSwap!</h2>
                 <p>Wymieniaj się, kolekcjonuj i poznawaj wspaniałych ludzi razem z nami...</p>
-                <button class="button">@Html.ActionLink("Dołącz do nas","Login","Account")</button>
+                <button class="button">@Html.ActionLink("Dołącz do nas","Register","Account")</button>
+                <button class="button">@Html.ActionLink("Zaloguj się", "Login", "Account")</button>
             </div><!-- /banner-content -->
         </div><!-- /container -->
         <div class="container">
@@ -117,45 +116,138 @@
             </div>
         </div>
     </div>
-
+    <!-- /about -->
+    <!-- mswap -->
+    <div class="mswap">
+        <div class="mswap-akapit col-md-7">
+            <h2>Zawsze na bieżaco dzięki MobileSwap !</h2>
+            <p>
+                Nasza aplikacja mobilna - MobileSwap daje Ci możliwość lokalizowania nowych wydarzeń, lepszej integracji z innymi pasjonatami i zdobywania wspaniałych achievmentów - wirtualnych osiągnięć Swapera.
+            </p>
+            <button class="button"><span>Odkryj MobileSwap</span></button>
+        </div>
+        <div class="mswap-image col-md-5"></div>
+    </div>
+    <!-- /mswap -->
+    <!-- stats -->
+    <div class="stats">
+        <div class="container">
+            <h2>Nasze statystyki</h2>
+            <p>Zobacz jakie rezultaty przynosi nasza praca</p>
+            <div class="stat1 col-md-3">
+                <h2 class="counter">21</h2>
+                <h3>Lokalnych Zespołów SS</h3>
+            </div>
+            <div class="stat1 col-md-3">
+                <h2 class="counter">1721</h2>
+                <h3>Pasjonatów w sieci SS</h3>
+            </div>
+            <div class="stat1 col-md-3">
+                <h2 class="counter">86</h2>
+                <h3>Zorganizowanych eventów</h3>
+            </div>
+            <div class="stat1 col-md-3">
+                <h2 class="counter">736</h2>
+                <h3>Dokonanych swapów</h3>
+            </div>
+        </div>
+    </div>
+    <!-- /stats -->
+    <!-- team -->
+    <div class="team">
+        <h2>Poznaj zespół SocialSwap!</h2>
+        <p>Kochamy swoje pasje tak samo jak Ty</p>
+        <div class="container">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="team-img"><div class="team1-img"></div></div>
+                    <h3>Kamil Bączek</h3>
+                    <p>Morbi hendrerit felis vitae magna ultrices, nec lobortis est dictum. Etiam eleifend elementum leo, quis rutrum massa consequat ut.</p>
+                    <div class="team-icons">
+                        <div class="icon-fb col-md-4"><a href="#"><span class="social-icon fa fa-facebook"></span></a></div>
+                        <div class="icon-in col-md-4"><a href="#"><span class="social-icon fa fa-linkedin"></span></a></div>
+                        <div class="icon-git col-md-4"><a href="#"><span class="social-icon fa fa-github"></span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="team-img"><div class="team2-img"></div></div>
+                    <h3>Bartek Hajder</h3>
+                    <p>Morbi hendrerit felis vitae magna ultrices, nec lobortis est dictum. Etiam eleifend elementum leo, quis rutrum massa consequat ut.<p>
+                        <div class="team-icons">
+                            <div class="icon-fb col-md-4"><a href="#"><span class="social-icon fa fa-facebook"></span></a></div>
+                            <div class="icon-in col-md-4"><a href="#"><span class="social-icon fa fa-linkedin"></span></a></div>
+                            <div class="icon-git col-md-4"><a href="#"><span class="social-icon fa fa-github"></span></a></div>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="team-img"><div class="team3-img"></div></div>
+                    <h3>Oskar Bzdoń</h3>
+                    <p>Morbi hendrerit felis vitae magna ultrices, nec lobortis est dictum. Etiam eleifend elementum leo, quis rutrum massa consequat ut.</p>
+                    <div class="team-icons">
+                        <div class="icon-fb col-md-4"><a href="#"><span class="social-icon fa fa-facebook"></span></a></div>
+                        <div class="icon-in col-md-4"><a href="#"><span class="social-icon fa fa-linkedin"></span></a></div>
+                        <div class="icon-git col-md-4"><a href="#"><span class="social-icon fa fa-github"></span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="team-img"><div class="team4-img"></div></div>
+                    <h3>Dominik Materna</h3>
+                    <p>Morbi hendrerit felis vitae magna ultrices, nec lobortis est dictum. Etiam eleifend elementum leo, quis rutrum massa consequat ut.</p>
+                    <div class="team-icons">
+                        <div class="icon-fb col-md-4"><a href="#"><span class="social-icon fa fa-facebook"></span></a></div>
+                        <div class="icon-in col-md-4"><a href="#"><span class="social-icon fa fa-linkedin"></span></a></div>
+                        <div class="icon-git col-md-4"><a href="#"><span class="social-icon fa fa-github"></span></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /team -->
+    <!-- footer -->
+    <div class="footer">
+        <div class="footer-info">
+            <div class="container">
+                <div class="info">
+                    <img src="../images/logo.png" />
+                    <p>Lokalna platforma wymian<br />zrzeszająca hobbystów</p>
+                    <h2>Skontaktuj się z nami mailowo:</h2>
+                    <h3>socialswap<span>&commat;</span>gmail.com</h3>
+                    <div class="smedia-wrapper">
+                        <div class="smedia-center">
+                            <div class="smedia col-md-4"><a href="#"><span class="social-icon fa fa-facebook-square"></a></span></div>
+                            <div class="smedia col-md-4"><a href="#"><span class="social-icon fa fa-youtube-play"></a></span></div>
+                            <div class="smedia col-md-4"><a href="#"><span class="social-icon fa fa-snapchat"></a></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="credits">
+            <div class="container">
+                <p>&copy; SocialSwap 2017 | All rights reserved</p>
+            </div>
+        </div>
+    </div>
+    <!-- /footer -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="~/Scripts/navigation.js"></script><!-- obsługa animacji nav'u -->
+    <script src="~/Scripts/scroll.js"></script> <!-- nav click scroll -->
+    <!-- stats -->
+    <script src="~/Scripts/waypoints.min.js"></script>
+    <script src="~/Scripts/counterup.min.js"></script>
     <script>
-        var pageShowTime;
-
-        function showPageTimeout() {
-            pageShowTime = setTimeout(showPage, 3000);
-        }
-
-        function showPage() {
-            document.getElementById("loader").style.display = "none";
-            document.getElementById("content").style.display = "block";
-        }
-    </script>
-    <script>
-        $(window).scroll(function () {
-            var scroll = $(window).scrollTop();
-            if (scroll >= 100) {
-                $(".nav-script").fadeOut(300);
-                $(".aboutnav").addClass("active");
-                $(".home").removeClass("active");
-            }
-            else {
-                $(".home").addClass("active");
-                $(".aboutnav").removeClass("active");
-                $(".nav-script").fadeIn(400);
-
-            }
-
-            if (scroll >= 700) {
-                $(".sticky-nav-script").fadeIn(800);
-                $(".sticky-nav-script").addClass("navbar-fixed-top");
-                $(".sticky-nav-script").removeClass("unvisible");
-            }
-            else {
-                $(".sticky-nav-script").fadeOut(200);
-            }
+        jQuery(document).ready(function ($) {
+            $('.counter').counterUp({
+                delay: 30,
+                time: 2000
+            });
         });
     </script>
-</div>
+    <!-- //stats -->
