@@ -73,7 +73,7 @@ namespace git_test.Controllers
         {
             if(Session["UserId"]!=null)
             {
-                using (ThingDbContex db = new ThingDbContex())
+                using (OurDbContex db = new OurDbContex())
                 {
                     return View(db.Thing.ToList());
 
@@ -105,7 +105,7 @@ namespace git_test.Controllers
         {
             if (ModelState.IsValid)
             {
-                using (ThingDbContex db = new ThingDbContex())
+                using (OurDbContex db = new OurDbContex())
                 {
                    
 

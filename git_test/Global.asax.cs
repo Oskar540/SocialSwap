@@ -15,7 +15,6 @@ namespace git_test
         protected void Application_Start()
         {
             Database.SetInitializer<OurDbContex>(null);
-            Database.SetInitializer<ThingDbContex>(null);
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

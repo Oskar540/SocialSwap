@@ -154,7 +154,6 @@
     </Compile>
     <Compile Include="Models\OurDbContex.cs" />
     <Compile Include="Models\Thing.cs" />
-    <Compile Include="Models\ThingDbContex.cs" />
     <Compile Include="Models\UserAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
